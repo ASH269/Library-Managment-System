@@ -1,0 +1,261 @@
+/* Main Navbar */
+
+.main-navbar {
+  background: #172a3a;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #14b8a6;
+}
+
+.navbar-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  min-height: 72px;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Brand */
+
+.library-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.library-brand:hover {
+  color: #14b8a6;
+}
+
+.brand-icon {
+  font-size: 1.7rem;
+}
+
+
+/* Navigation Area */
+
+.navigation-area {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* Navigation Links */
+
+.navigation-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-nav-link {
+  color: #e8eef2;
+  text-decoration: none;
+
+  padding: 9px 13px;
+  border-radius: 7px;
+
+  font-size: 0.98rem;
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+}
+
+.custom-nav-link:hover {
+  color: #ffffff;
+  background: rgba(20, 184, 166, 0.15);
+}
+
+
+/* Account Area */
+
+.account-area {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Login / Signup */
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-button,
+.signup-button,
+.profile-button,
+.logout-button {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  padding: 9px 16px;
+  border-radius: 7px;
+
+  transition: all 0.25s ease;
+}
+
+.login-button {
+  color: #ffffff;
+  border: 1px solid #8fa3b5;
+}
+
+.login-button:hover {
+  background: #ffffff;
+  color: #172a3a;
+}
+
+.signup-button {
+  color: #172a3a;
+  background: #14b8a6;
+  border: 1px solid #14b8a6;
+}
+
+.signup-button:hover {
+  background: #0f9488;
+  border-color: #0f9488;
+  color: #ffffff;
+}
+
+
+/* Profile */
+
+.profile-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-button {
+  color: #172a3a;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.profile-button:hover {
+  color: #172a3a;
+  background: #e8f8f6;
+}
+
+.logout-button {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #e76f51;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #e76f51;
+}
+
+
+/* Mobile Menu Button */
+
+.menu-button {
+  display: none;
+
+  width: 42px;
+  height: 38px;
+
+  padding: 7px;
+
+  background: transparent;
+  border: 1px solid #78909c;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background: #ffffff;
+
+  transition: all 0.25s ease;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+  .navbar-container {
+    min-height: 65px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .navigation-area {
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    background: #172a3a;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 20px;
+
+    border-top: 1px solid #30485b;
+  }
+
+  .navigation-area.open {
+    display: flex;
+  }
+
+  .navigation-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .custom-nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .account-area {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auth-buttons,
+  .profile-area {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .login-button,
+  .signup-button,
+  .profile-button,
+  .logout-button {
+    text-align: center;
+  }
+}

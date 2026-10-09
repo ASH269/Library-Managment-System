@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend build files
+dist/
+build/
+.angular/
+
+# Python virtual environment
+backend/venv/
+backend/.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDE files
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
